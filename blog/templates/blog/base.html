@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<html>
+    <head>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{% static "css/blog.css" %}">
+		
+        <title>Mi primer Blog con DJango</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="http://argentinaenpython.com.ar">Argentina en Python</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
